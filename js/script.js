@@ -1,5 +1,6 @@
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
+const clouds = document.querySelector('.clouds');
 const btn = document.querySelector("#refresh");
 
 const jump = () => {
@@ -15,6 +16,8 @@ const jump = () => {
 const loop = setInterval(()=>{
     
     const pipePosition = pipe.offsetLeft;
+    
+    const cloudsPosition = clouds.offsetLeft;
     const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
 
     if (pipePosition <= 120 && pipePosition && marioPosition < 80){
@@ -29,6 +32,13 @@ const loop = setInterval(()=>{
         mario.style.width = '75px';
         mario.style.marginLeft = '50px';
 
+        clouds.style.animation = 'none';
+        clouds.style.left = `${cloudsPosition}px`;
+
+        clouds.src = './images/clouds.png';
+        clouds.style.width = '75px';
+        clouds.style.marginLeft = '550px';
+
         clearInterval(loop);
         
         btn.addEventListener("click", function() {
@@ -41,4 +51,4 @@ const loop = setInterval(()=>{
 
 
 
-document.addEventListener('keydown', jump);
+document.addEventListener('click', jump);
