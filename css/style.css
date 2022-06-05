@@ -27,6 +27,11 @@
     bottom: 0;
 }
 
+/*
+.refresh {
+    position: absolute;
+}*/
+
 .jump {
     animation: jump 500ms ease-out;
 }
@@ -83,3 +88,4 @@
 footer{
     height: 40px;
 }
+
