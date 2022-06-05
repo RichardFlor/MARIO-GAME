@@ -52,3 +52,4 @@ const loop = setInterval(()=>{
 
 
 document.addEventListener('click', jump);
+document.addEventListener('keydown', jump);
