@@ -1,7 +1,8 @@
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
 const clouds = document.querySelector('.clouds');
-const reset = document.querySelector('.refresh');
+const azul = document.querySelector('.azul');
+const reset = document.querySelector('.azul');
 
 const jump = () => {
     mario.classList.add('jump');
@@ -16,6 +17,7 @@ const jump = () => {
 const loop = setInterval(()=>{
     
     const pipePosition = pipe.offsetLeft;
+   
     
     const cloudsPosition = clouds.offsetLeft;
     const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
@@ -35,10 +37,11 @@ const loop = setInterval(()=>{
         clouds.style.animation = 'none';
         clouds.style.left = `${cloudsPosition}px`;
 
-        // clouds.src = './images/reset.png';
-        // clouds.style.width = '100px';
-        // clouds.style.marginLeft = '-600px';
-        // clouds.style.marginTop = '200px';
+        //azul.style = 'none';
+
+        azul.src = './images/reset.png';
+        azul.style.width = '100px';
+      
 
         // btn.src = './images/reset.png';
         // btn.style.width = '75px';
@@ -48,6 +51,10 @@ const loop = setInterval(()=>{
         clearInterval(loop);
         
         reset.addEventListener("click", function() {
+    
+            location.reload();
+        });
+        azul.addEventListener("click", function() {
     
             location.reload();
         });

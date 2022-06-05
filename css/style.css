@@ -27,10 +27,13 @@
     bottom: 0;
 }
 
-/*
-.refresh {
+.azul {
     position: absolute;
-}*/
+    margin-top: 255px;
+    margin-left: 600px;
+}
+
+
 
 .jump {
     animation: jump 500ms ease-out;
@@ -87,5 +90,6 @@
 
 footer{
     height: 40px;
+    margin-left: 550px;
 }
 
