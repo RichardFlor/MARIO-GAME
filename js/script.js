@@ -37,16 +37,9 @@ const loop = setInterval(()=>{
         clouds.style.animation = 'none';
         clouds.style.left = `${cloudsPosition}px`;
 
-        //azul.style = 'none';
-
         azul.src = './images/reset.png';
         azul.style.width = '100px';
       
-
-        // btn.src = './images/reset.png';
-        // btn.style.width = '75px';
-        // btn.style.marginTop = '200px';
-        // btn.style.marginLeft = '600px';
 
         clearInterval(loop);
         
@@ -60,9 +53,6 @@ const loop = setInterval(()=>{
         });
     }    
 }, 10);
-
-
-
 
 document.addEventListener('click', jump);
 document.addEventListener('keydown', jump);
